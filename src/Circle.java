@@ -8,7 +8,7 @@ public class Circle extends Point
     final double pi = Math.PI;
 
 
-    //Default Constructor, x,y and radius = 0
+    //Default Constructor, x,y,z and radius = 0
     public Circle()
     {
         super();
