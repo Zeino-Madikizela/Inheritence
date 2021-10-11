@@ -32,21 +32,14 @@ public class Square extends Point
     }
 
     //Square Methods
-
     public double squarePerimeter(double side)
     {
-        double perimeter;
-
-        perimeter = 4*side;
-        return perimeter;
+        return 4*side;
     }
 
     public double squareArea(double side)
     {
-        double area;
-
-        area = Math.pow(side, 2);
-        return area;
+        return Math.pow(side, 2);
     }
 
 }

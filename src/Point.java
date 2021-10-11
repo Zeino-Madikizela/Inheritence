@@ -55,9 +55,7 @@ public class Point
     }
 
     public String showCoordinates(){
-        String coordinates;
-        coordinates = "(" + getxCoord() + ", " + getyCoord() + ", " + getzCoord() + ")";
-        return coordinates;
+        return "(" + getxCoord() + ", " + getyCoord() + ", " + getzCoord() + ")";
     }
 
 

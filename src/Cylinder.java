@@ -52,19 +52,12 @@ public class Cylinder extends Circle
 
     public double cylinderVolume()
     {
-        double circleArea;
-        double cylinderVolume;
-
-        circleArea = super.circleArea();
-        cylinderVolume = circleArea*height;
-
-        return cylinderVolume;
+        return super.circleArea()*height;
     }
 
-    public double circleArea()
+    public double cylinderArea()
     {
-        double area = super.circlePerimeter() * (getHeight() + getRadius());
-        return area;
+        return super.circlePerimeter() * (getHeight() + getRadius());
     }
 
 
