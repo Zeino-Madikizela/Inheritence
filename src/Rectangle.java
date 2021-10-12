@@ -45,12 +45,19 @@ public class Rectangle extends Point
         this.breadth = breadth;
     }
 
-    //Rectangle Methods
+    // Rectangle Methods
 
     public void setSides(double length, double breadth)
     {
         this.length = length;
         this.breadth = breadth;
+    }
+
+    // Set both sides to one side...
+    public void setSides(double side)
+    {
+        this.length = side;
+        this.breadth = side;
     }
 
     public double rectanglePerimeter(double length, double breadth)

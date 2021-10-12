@@ -20,7 +20,13 @@ class RectangleTest {
         //Testing the setSides method
         myRectangle.setSides(6, 8);
         System.out.println("The perimeter of the Rectangle with length : " + myRectangle.getLength() + " and breadth " + myRectangle.getBreadth()+ " is " + myRectangle.rectanglePerimeter(myRectangle.getLength(), myRectangle.getBreadth() ) );
+        System.out.println("The area of the Rectangle with length : " + myRectangle.getLength() + " and breadth " + myRectangle.getBreadth()+ " is " + myRectangle.rectangleArea(myRectangle.getLength(), myRectangle.getBreadth() ) +"\n" );
+
+        //Test the method for both sides to be the same length
+        myRectangle.setSides(5);
+        System.out.println("The perimeter of the Rectangle with length : " + myRectangle.getLength() + " and breadth " + myRectangle.getBreadth()+ " is " + myRectangle.rectanglePerimeter(myRectangle.getLength(), myRectangle.getBreadth() ) );
         System.out.println("The area of the Rectangle with length : " + myRectangle.getLength() + " and breadth " + myRectangle.getBreadth()+ " is " + myRectangle.rectangleArea(myRectangle.getLength(), myRectangle.getBreadth() ) );
+
 
         //All tested and work
     }
