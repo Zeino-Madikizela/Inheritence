@@ -21,6 +21,13 @@ public class Rectangle extends Point
         this.breadth = breadth;
     }
 
+    public Rectangle(int x, int y, int z)
+    {
+        super(x, y, z);
+        this.length = 0;
+        this.breadth = 0;
+    }
+
     public Rectangle(int x, int y, int z, double length, double breadth)
     {
         super(x, y, z);

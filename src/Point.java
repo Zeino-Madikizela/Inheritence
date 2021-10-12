@@ -58,5 +58,21 @@ public class Point
         return "(" + getxCoord() + ", " + getyCoord() + ", " + getzCoord() + ")";
     }
 
+    public void setCoordinates(int xCoord, int yCoord)
+    {
+        this.xCoord = xCoord;
+        this.yCoord = yCoord;
+        this.zCoord = 0;
+    }
+
+    public void setCoordinates(int xCoord, int yCoord, int zCoord)
+    {
+        this.xCoord = xCoord;
+        this.yCoord = yCoord;
+        this.zCoord = zCoord;
+    }
+
+
+
 
 }
