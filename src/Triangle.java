@@ -11,6 +11,21 @@ public class Triangle extends Point
         this.length = 0;
     }
 
+    public Triangle(int xCoord, int yCoord)
+    {
+        super(xCoord, yCoord);
+        this.height = 0;
+        this.length = 0;
+        this.zCoord = 0;
+    }
+
+    public Triangle(int xCoord, int yCoord, int zCoord)
+    {
+        super(xCoord, yCoord, zCoord);
+        this.height = 0;
+        this.length = 0;
+    }
+
 
     //Getters and Setters
     public double getHeight() {
