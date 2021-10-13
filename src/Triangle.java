@@ -97,6 +97,12 @@ public class Triangle extends Point
         this.side3 = side3;
     }
 
+    public String showSides()
+    {
+
+        return "\nSide 1 is : " + this.side1 + "\nSide 2 is : " + this.side2 + "\nSide 3 is : " + this.side3 + "\n";
+    }
+
     public double perimeter()
     {
         return (side1 + side2 + side3);
