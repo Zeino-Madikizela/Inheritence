@@ -15,10 +15,5 @@ class SquareTest
         System.out.println("\nThe perimeter of the Square with side : " + mySquare.getSide() + " is " + mySquare.squarePerimeter(mySquare.getSide() ) + " units");
         System.out.println("The area of the Square with the side : " + mySquare.getSide() + " is " + mySquare.squareArea(mySquare.getSide() ) + " units squared");
 
-
-
-
-
-
     }
 }
