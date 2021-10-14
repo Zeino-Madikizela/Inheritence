@@ -72,7 +72,4 @@ public class Point
         this.zCoord = zCoord;
     }
 
-
-
-
 }
