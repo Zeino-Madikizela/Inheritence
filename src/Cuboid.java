@@ -19,6 +19,4 @@ public class Cuboid extends Rectangle
         this.height = height;
     }
 
-
-
 }
