@@ -13,6 +13,13 @@ public class Rectangle extends Point
         breadth = 0;
     }
 
+
+    public Rectangle(double length, double breadth)
+    {
+        this.length = length;
+        this.breadth = breadth;
+    }
+
     //Initialize x,y and side
     public Rectangle(int x, int y, double length, double breadth)
     {
