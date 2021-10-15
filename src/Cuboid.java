@@ -19,4 +19,23 @@ public class Cuboid extends Rectangle
         this.height = height;
     }
 
+    public double area()
+    {
+        return (length*breadth + breadth*height + length*height)*2;
+    }
+
+    public double volume()
+    {
+        return length*breadth*height;
+    }
+
+    public void setSides(double length, double breadth, double height) {
+        super.setSides(length, breadth);
+        this.height = height;
+    }
+
+    public String getSides()
+    {
+        return "\nLength\t: " + length + "\nBreadth\t: " + breadth + "\nHeight\t: " + height;
+    }
 }
