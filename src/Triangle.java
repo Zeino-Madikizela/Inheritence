@@ -1,7 +1,5 @@
 public class Triangle extends Point
 {
-    double height;
-    double length;
     double side1;
     double side2;
     double side3;
@@ -10,61 +8,19 @@ public class Triangle extends Point
     public Triangle()
     {
         super();
-        this.height = 0;
-        this.length = 0;
         this.side1 = 0;
         this.side2 = 0;
         this.side3 = 0;
     }
 
-    public Triangle(int xCoord, int yCoord)
+    public Triangle(double side1, double side2, double side3)
     {
-        super(xCoord, yCoord);
-        this.height = 0;
-        this.length = 0;
-        this.zCoord = 0;
-        this.side1 = 0;
-        this.side2 = 0;
-        this.side3 = 0;
-    }
-
-    public Triangle(int xCoord, int yCoord, int zCoord)
-    {
-        super(xCoord, yCoord, zCoord);
-        this.height = 0;
-        this.length = 0;
-        this.side1 = 0;
-        this.side2 = 0;
-        this.side3 = 0;
-
-    }
-
-    public Triangle(int xCoord, int yCoord, int zCoord, double length, double height)
-    {
-        super(xCoord, yCoord, zCoord);
-        this.height = height;
-        this.length = length;
-        this.side1 = 0;
-        this.side2 = 0;
-        this.side3 = 0;
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
     }
 
     //Getters and Setters
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public double getLength() {
-        return length;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
-    }
 
     public double getSide1() {
         return side1;
@@ -100,7 +56,7 @@ public class Triangle extends Point
     public String showSides()
     {
 
-        return "\nSide 1 is : " + this.side1 + "\nSide 2 is : " + this.side2 + "\nSide 3 is : " + this.side3 + "\n";
+        return "\nSide 1 is\t: " + this.side1 + "\nSide 2 is\t: " + this.side2 + "\nSide 3 is\t: " + this.side3 + "\n";
     }
 
     public double perimeter()
