@@ -13,8 +13,8 @@ class CuboidTest
         System.out.println(myCuboid.getSides());
 
         //Testing the calculations                                                                                      //Passed
-        System.out.println("The total surface area is : " + myCuboid.area() + " units^2");
-        System.out.println("The volume is             : " + myCuboid.volume() + " units^3");
+        System.out.println("The total surface area is : " + myCuboid.calArea() + " units^2");
+        System.out.println("The volume is             : " + myCuboid.calVolume() + " units^3");
 
     }
 }

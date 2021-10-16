@@ -19,12 +19,12 @@ public class Cuboid extends Rectangle
         this.height = height;
     }
 
-    public double area()
+    public double calArea()
     {
         return (length*breadth + breadth*height + length*height)*2;
     }
 
-    public double volume()
+    public double calVolume()
     {
         return length*breadth*height;
     }
