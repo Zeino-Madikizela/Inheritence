@@ -29,7 +29,7 @@ public class Cuboid extends Rectangle
         return length*breadth*height;
     }
 
-    //Accommodating a cube where all sides are equal
+    // Accommodating a cube where all sides are equal
     public void setSides(double side) {
         super.setSides(side, side);
         this.height = side;
