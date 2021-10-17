@@ -51,7 +51,7 @@ public class Circle extends Point
         return area;
     }
 
-    public double circlePerimeter(){
+    public double calcPerimeter(){
         double perimeter;
         perimeter = 2*pi*radius;
         return perimeter;

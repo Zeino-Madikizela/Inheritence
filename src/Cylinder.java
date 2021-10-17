@@ -57,7 +57,7 @@ public class Cylinder extends Circle
 
     public double cylinderArea()
     {
-        return super.circlePerimeter() * (getHeight() + getRadius());
+        return super.calcPerimeter() * (getHeight() + getRadius());
     }
 
 

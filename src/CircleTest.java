@@ -19,7 +19,7 @@ public class CircleTest
         System.out.println("The new radius is : " + myCircle.getRadius() );
 
         //Performing calculations
-        System.out.println("\n" + "The Perimeter of the circle is : " + myCircle.circlePerimeter() + " units" );
+        System.out.println("\n" + "The Perimeter of the circle is : " + myCircle.calcPerimeter() + " units" );
         System.out.println("The area of the circle is : " + myCircle.calcArea() + " square units");
 
     }

@@ -33,6 +33,11 @@ public class main
              JOptionPane.showMessageDialog(null, "The area of the circle with radius " + myCircle.getRadius() + "is " + myCircle.calcArea());
          }
 
+         else if(choice ==2)
+         {
+             JOptionPane.showMessageDialog(null, "The area of the circle with radius " + myCircle.getRadius() + "is " + myCircle.calcPerimeter() );
+         }
+
      }
 
 
