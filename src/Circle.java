@@ -45,7 +45,7 @@ public class Circle extends Point
         return getRadius();
     }
 
-    public double circleArea(){
+    public double calcArea(){
         double area;
         area = pi*Math.pow(radius, 2);
         return area;

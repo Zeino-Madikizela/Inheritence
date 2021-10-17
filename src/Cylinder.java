@@ -52,7 +52,7 @@ public class Cylinder extends Circle
 
     public double cylinderVolume()
     {
-        return super.circleArea()*height;
+        return super.calcArea()*height;
     }
 
     public double cylinderArea()

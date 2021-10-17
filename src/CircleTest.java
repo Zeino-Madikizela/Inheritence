@@ -20,7 +20,7 @@ public class CircleTest
 
         //Performing calculations
         System.out.println("\n" + "The Perimeter of the circle is : " + myCircle.circlePerimeter() + " units" );
-        System.out.println("The area of the circle is : " + myCircle.circleArea() + " square units");
+        System.out.println("The area of the circle is : " + myCircle.calcArea() + " square units");
 
     }
 }
