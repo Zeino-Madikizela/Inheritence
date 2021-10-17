@@ -35,7 +35,7 @@ public class main
 
          else if(choice ==2)
          {
-             JOptionPane.showMessageDialog(null, "The area of the circle with radius " + myCircle.getRadius() + "is " + myCircle.calcPerimeter() );
+             JOptionPane.showMessageDialog(null, "The Perimeter of the circle with radius " + myCircle.getRadius() + "is " + myCircle.calcPerimeter() );
          }
 
      }
