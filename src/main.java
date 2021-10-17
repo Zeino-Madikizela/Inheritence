@@ -30,17 +30,15 @@ public class main
 
          if (choice == 1)
          {
-             JOptionPane.showMessageDialog(null, "The area of the circle with radius " + myCircle.getRadius() + "is " + myCircle.calcArea());
+             JOptionPane.showMessageDialog(null, "The area of the circle with radius " + myCircle.getRadius() + " is " + roundOff(myCircle.calcArea(),2) );
          }
 
          else if(choice ==2)
          {
-             JOptionPane.showMessageDialog(null, "The Perimeter of the circle with radius " + myCircle.getRadius() + "is " + myCircle.calcPerimeter() );
+             JOptionPane.showMessageDialog(null, "The Perimeter of the circle with radius " + myCircle.getRadius() + " is " + roundOff(myCircle.calcPerimeter(),2) );
          }
 
      }
-
-
 
      public static void calShapes()
      {
@@ -63,6 +61,16 @@ public class main
 
          }
 
+
+
+     }
+
+     public static double roundOff(double value, int deciPlace)
+     {
+         value = value*(Math.pow(10,deciPlace));
+         int temp = (int) value;
+         value = temp/Math.pow(10,deciPlace);
+         return value;
      }
 
 }
