@@ -24,6 +24,15 @@ public class main
          input = JOptionPane.showInputDialog("Enter the radius");
          choice = Integer.parseInt(input);
          myCircle.setRadius(choice);
+
+         input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Area \n2. Calculate Perimeter");
+         choice = Integer.parseInt(input);
+
+         if (choice == 1)
+         {
+             JOptionPane.showMessageDialog(null, "The area of the circle with radius " + myCircle.getRadius() + "is " + myCircle.calcArea());
+         }
+
      }
 
 
@@ -48,7 +57,7 @@ public class main
              choice = Integer.parseInt(input);
 
          }
-         
+
      }
 
 }
