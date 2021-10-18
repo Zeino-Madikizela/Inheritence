@@ -40,6 +40,33 @@ public class main
 
      }
 
+     public static void calRectangle()
+     {
+         double height, breadth;
+         Rectangle myRectangle = new Rectangle();
+         input = JOptionPane.showInputDialog("Enter the height : ");
+         height = Integer.parseInt(input);
+         input = JOptionPane.showInputDialog("Enter the breadth : ");
+         breadth = Integer.parseInt(input);
+         myRectangle.setSides(height,breadth);
+
+         input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Area \n2. Calculate Perimeter");
+         choice = Integer.parseInt(input);
+
+         if (choice == 1)
+         {
+             JOptionPane.showMessageDialog(null, "The area of the rectangle is " + roundOff(myRectangle.calcArea(),2 ) );
+         }
+
+         else if(choice ==2)
+         {
+             JOptionPane.showMessageDialog(null, "The Perimeter of the rectangle is " + roundOff(myRectangle.calPerimeter(),2 ) );
+         }
+
+         else {JOptionPane.showMessageDialog(null, "You have selected an option that is not available yet");}
+
+     }
+
      public static void calShapes()
      {
 
@@ -49,11 +76,16 @@ public class main
          if (choice == 1)   //2D Shapes
          {
              input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Circle \n2. Rectangle \n3. Square \n4. Triangle");
+             choice = Integer.parseInt(input);
 
              if (choice == 1)   //If Circle is chosen
                 calCircle();
 
+             else if (choice == 2)
+                 calRectangle();
+
          }
+
          else if (choice == 2)
          {
              input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Cylinder \n2. Cuboid \n3. Cube \n4. Triangular Prism");
