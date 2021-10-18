@@ -75,12 +75,17 @@ public class Rectangle extends Point
         this.breadth = side;
     }
 
+    public double calcArea()
+    {
+        return this.length *this.breadth;
+    }
+
     public double rectanglePerimeter(double length, double breadth)
     {
         return 2*length + 2*breadth;
     }
 
-    public double rectangleArea(double length, double breadth)
+    public double calcArea(double length, double breadth)
     {
         return length *breadth;
     }
