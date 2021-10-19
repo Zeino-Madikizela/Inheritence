@@ -1,9 +1,10 @@
 import javax.swing.JOptionPane;
 
-public class main
+public class Main
 {
      public static void main(String[] args)
      {
+
          String input;
          int choice;
          input = JOptionPane.showInputDialog("Please choose what you will be doing in this app \n1. Calculations of shapes");
