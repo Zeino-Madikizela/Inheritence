@@ -15,6 +15,7 @@ public class main
 
      }
 
+     //Class variables
     static String input;
     static int choice;
 
@@ -67,6 +68,31 @@ public class main
 
      }
 
+     public static void calSquare()
+     {
+         double side;
+         Square mySquare = new Square();
+         input = JOptionPane.showInputDialog("Enter the side : ");
+         side = Integer.parseInt(input);
+         mySquare.setSide(side);
+
+         input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Area \n2. Calculate Perimeter");
+         choice = Integer.parseInt(input);
+
+         if (choice == 1)
+         {
+             JOptionPane.showMessageDialog(null, "The area of the square is " + roundOff(mySquare.calcArea(),2 ) );
+         }
+
+         else if(choice ==2)
+         {
+             JOptionPane.showMessageDialog(null, "The Perimeter of the square is " + roundOff(mySquare.calcPerimeter(),2 ) );
+         }
+
+         else {JOptionPane.showMessageDialog(null, "You have selected an option that is not available yet");}
+
+     }
+
      public static void calShapes()
      {
 
@@ -83,6 +109,11 @@ public class main
 
              else if (choice == 2)
                  calRectangle();
+
+             else if (choice == 3) //If Square is chosen
+             {
+                 calSquare();
+             }
 
          }
 
