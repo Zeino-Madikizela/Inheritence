@@ -94,6 +94,39 @@ public class Main
 
      }
 
+    public static void calTriangle()
+    {
+        double side1, side2, side3;
+
+       Triangle myTriangle = new Triangle();
+
+       //User Prompts to enter sides
+        input = JOptionPane.showInputDialog("Enter the side1 : ");
+        side1 = Double.parseDouble(input);
+        input = JOptionPane.showInputDialog("Enter the side2 : ");
+        side2 = Double.parseDouble(input);
+        input = JOptionPane.showInputDialog("Enter the side3 : ");
+        side3 = Double.parseDouble(input);
+
+        //Setting the new sides to the triangle
+        myTriangle.setSides(side1, side2, side3);
+        input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Area \n2. Calculate Perimeter");
+        choice = Integer.parseInt(input);
+
+        if (choice == 1)
+        {
+            JOptionPane.showMessageDialog(null, "The area of the triangle is " + roundOff(myTriangle.calcArea(),2 ) );
+        }
+
+        else if(choice ==2)
+        {
+            JOptionPane.showMessageDialog(null, "The Perimeter of the square is " + roundOff(myTriangle.calcPerimeter(),2 ) );
+        }
+
+        else {JOptionPane.showMessageDialog(null, "You have selected an option that is not available yet");}
+
+    }
+
      public static void calShapes()
      {
 
@@ -116,13 +149,17 @@ public class Main
                  calSquare();
              }
 
+             else if (choice == 4) //If Triangle is chosen
+             {
+                 calTriangle();
+             }
+
          }
 
          else if (choice == 2)
          {
              input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Cylinder \n2. Cuboid \n3. Cube \n4. Triangular Prism");
              choice = Integer.parseInt(input);
-
          }
 
      }
