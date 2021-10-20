@@ -125,6 +125,7 @@ public class Main
             JOptionPane.showMessageDialog(null, "The Perimeter of the square is " + roundOff(myTriangle.calcPerimeter(),2 ) );
         }
 
+        //If the user has made an invalid selection
         else {JOptionPane.showMessageDialog(null, "You have selected an option that is not available yet");}
 
     }
