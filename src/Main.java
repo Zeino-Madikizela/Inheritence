@@ -113,11 +113,13 @@ public class Main
         input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Area \n2. Calculate Perimeter");
         choice = Integer.parseInt(input);
 
+        //If the user want to calculate the area
         if (choice == 1)
         {
             JOptionPane.showMessageDialog(null, "The area of the triangle is " + roundOff(myTriangle.calcArea(),2 ) );
         }
 
+        //If the user want to calculate the perimeter
         else if(choice ==2)
         {
             JOptionPane.showMessageDialog(null, "The Perimeter of the square is " + roundOff(myTriangle.calcPerimeter(),2 ) );
