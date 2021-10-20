@@ -37,8 +37,8 @@ class TriangleTest {
         System.out.println("Side 3 is : "+ myTriangle.getSide3() );
 
         //Testing the area and perimeter                                                                                //Passed
-        System.out.println("The Perimeter is : " + myTriangle.perimeter());
-        System.out.println("The Area is : " + myTriangle.area() );
+        System.out.println("The Perimeter is : " + myTriangle.calcPerimeter());
+        System.out.println("The Area is : " + myTriangle.calcArea() );
     }
 
 }

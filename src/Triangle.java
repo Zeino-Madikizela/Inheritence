@@ -59,23 +59,23 @@ public class Triangle extends Point
         return "\nSide 1 is\t: " + this.side1 + "\nSide 2 is\t: " + this.side2 + "\nSide 3 is\t: " + this.side3 + "\n";
     }
 
-    public double perimeter()
+    public double calcPerimeter()
     {
         return (this.side1 + this.side2 + this.side3);
     }
 
-    public double perimeter(double side1, double side2, double side3)
+    public double calcPerimeter(double side1, double side2, double side3)
     {
-        return side1 + side2 + side3;
+        return this.side1 + this.side2 + this.side3;
     }
 
     /**This area method needs all three sides in order to calculate the area
      * s stands for the Semi Perimeter, the equation is called the Heron's Formula
      */
-    public double area ()
+    public double calcArea()
     {
-        double s = perimeter()/2;
-        return Math.pow(s*(s-side1)*(s-side2)*(s-side3),0.5);
+        double s = this.calcPerimeter()/2;
+        return Math.pow(s*(s-this.side1)*(s-this.side2)*(s-this.side3),0.5);
     }
 
 }

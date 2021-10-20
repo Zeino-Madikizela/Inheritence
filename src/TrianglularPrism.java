@@ -24,10 +24,10 @@ public class TrianglularPrism extends Triangle
         return super.showSides() + "height is\t: ";
     }
 
-    public double area()
+    public double calcArea()
     {
         double areaOfTriangles, areaOfRectangles;
-        areaOfTriangles = 2*super.area();
+        areaOfTriangles = 2*super.calcArea();
         areaOfRectangles = height*(side1 + side2 + side3);
         return areaOfTriangles + areaOfRectangles;
     }
