@@ -37,6 +37,12 @@ public class Cylinder extends Circle
         setHeight(height);
     }
 
+    public void setHeightRadius(double height, double radius)
+    {
+        this.height = height;
+        this.radius = radius;
+    }
+
 
     public Cylinder()
     {
@@ -50,12 +56,12 @@ public class Cylinder extends Circle
         this.height = height;
     }
 
-    public double cylinderVolume()
+    public double calVolume()
     {
         return super.calcArea()*height;
     }
 
-    public double cylinderArea()
+    public double calcArea()
     {
         return super.calcPerimeter() * (getHeight() + getRadius());
     }

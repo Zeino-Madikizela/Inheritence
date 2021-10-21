@@ -24,8 +24,8 @@ class CylinderTest
         System.out.println("The new center is : " + myCylinder.printCenter() + "\n" );
 
         //Testing the area and Volume methods  | area should with r = 0 and h = 0 should be 0.0                         //Success
-        System.out.println("The total area of the cylinder with radius = " + myCylinder.getRadius() + " and height "+ myCylinder.getHeight() + " is " + myCylinder.cylinderArea() );
-        System.out.println("The volume of the cylinder with base area = " + (int)myCylinder.calcArea() + " is " + myCylinder.cylinderVolume() + "\n" );
+        System.out.println("The total area of the cylinder with radius = " + myCylinder.getRadius() + " and height "+ myCylinder.getHeight() + " is " + myCylinder.calcArea() );
+        System.out.println("The volume of the cylinder with base area = " + (int)myCylinder.calcArea() + " is " + myCylinder.calVolume() + "\n" );
 
 
 
@@ -37,8 +37,8 @@ class CylinderTest
         System.out.println("The radius is : " + myCylinder.getRadius() + " and the height is : " + myCylinder.getHeight());
 
         //Testing the area and Volume methods                                                                           //Success
-        System.out.println("The total area of the cylinder with radius = " + myCylinder.getRadius() + " and height "+ myCylinder.getHeight() + " is " + myCylinder.cylinderArea() );
-        System.out.println("The volume of the cylinder with base area = " + (int)myCylinder.calcArea() + " is " + myCylinder.cylinderVolume() + "\n" );
+        System.out.println("The total area of the cylinder with radius = " + myCylinder.getRadius() + " and height "+ myCylinder.getHeight() + " is " + myCylinder.calcArea() );
+        System.out.println("The volume of the cylinder with base area = " + (int)myCylinder.calcArea() + " is " + myCylinder.calVolume() + "\n" );
 
 
     }
