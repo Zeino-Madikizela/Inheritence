@@ -130,6 +130,39 @@ public class Main
 
     }
 
+    /**3D Shapes **********************************************
+     * 1. Cylinder
+     * 2. Cube
+     * 3. Triangular Prism
+     * 4. Cuboid
+     */
+
+    public static void calCylinder()
+    {
+        double radius, height;
+        Cylinder myCylinder = new Cylinder();
+
+        input = JOptionPane.showInputDialog("Enter the radius : "); //Take input from user
+        radius = Integer.parseInt(input);
+        input = JOptionPane.showInputDialog("Enter the height : ");
+        height = Integer.parseInt(input);
+
+        myCylinder.setRadius(radius);   //Set the dimensions
+        myCylinder.setHeight(height);
+
+        input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Total Surface Area \n2. Calculate Volume");
+        choice = Integer.parseInt(input);
+
+        if (choice == 1)
+                    JOptionPane.showMessageDialog(null,"The Total Surface area is : " + roundOff(myCylinder.calcArea() , 2) );
+
+
+        else if (choice == 2)
+            JOptionPane.showMessageDialog(null, "The volume is : " + roundOff(myCylinder.calVolume(), 2) );
+
+
+    }
+
      public static void calShapes()
      {
 
@@ -163,6 +196,9 @@ public class Main
          {
              input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Cylinder \n2. Cuboid \n3. Cube \n4. Triangular Prism");
              choice = Integer.parseInt(input);
+
+             if (choice == 1)
+                 calCylinder();
          }
 
      }
