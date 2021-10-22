@@ -163,6 +163,22 @@ public class Main
 
     }
 
+    public static void calCube()
+    {
+        double side;
+        Cube myCube = new Cube();
+
+        input = JOptionPane.showInputDialog("Enter the side : "); //Take input from user
+        side = Integer.parseInt(input);
+
+        myCube.setSides(side);
+        input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Total Surface Area \n2. Calculate Volume");
+        choice = Integer.parseInt(input);
+
+        if (choice == 2)
+            JOptionPane.showMessageDialog(null, "The Total Surface area is : " + roundOff(myCube.calcArea(),2) );
+    }
+
      public static void calShapes()
      {
 
@@ -177,13 +193,13 @@ public class Main
              if (choice == 1)   //If Circle is chosen
                 calCircle();
 
-             else if (choice == 2)
-                 calRectangle();
-
-             else if (choice == 3) //If Square is chosen
+             else if (choice == 2) //If Square is chosen
              {
                  calSquare();
              }
+
+             else if (choice == 3)
+                 calRectangle();
 
              else if (choice == 4) //If Triangle is chosen
              {
@@ -194,11 +210,14 @@ public class Main
 
          else if (choice == 2)
          {
-             input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Cylinder \n2. Cuboid \n3. Cube \n4. Triangular Prism");
+             input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Cylinder \n2. Cube \n3. Cuboid \n4. Triangular Prism");
              choice = Integer.parseInt(input);
 
              if (choice == 1)
                  calCylinder();
+
+             else if (choice == 2)
+                 calCube();
          }
 
      }
