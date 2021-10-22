@@ -175,8 +175,10 @@ public class Main
         input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Total Surface Area \n2. Calculate Volume");
         choice = Integer.parseInt(input);
 
-        if (choice == 2)
+        if (choice == 1)
             JOptionPane.showMessageDialog(null, "The Total Surface area is : " + roundOff(myCube.calcArea(),2) );
+        else if (choice == 2)
+            JOptionPane.showMessageDialog(null, "The volume of the cube is : " + roundOff(myCube.calVolume(), 2) );
     }
 
      public static void calShapes()
