@@ -211,10 +211,10 @@ public class Main
          input = JOptionPane.showInputDialog("1. Enter 1 for 2D shapes  \n2. Enter 2 for 3D shapes : ");
          choice = Integer.parseInt(input);
 
-         boolean is2DShapes = choice ==1;
-         boolean is3DShapes = choice == 2;
+         boolean choiceIs2DShapes = choice ==1;
+         boolean choiceIs3DShapes = choice == 2;
 
-         if (is2DShapes)   //2D Shapes
+         if (choiceIs2DShapes)   //2D Shapes
          {
              boolean choiceIsCircle, choiceIsSqare,choiceIsRectangle,choiceIsTriangle = false;
 
@@ -240,7 +240,7 @@ public class Main
 
          }
 
-         else if (is3DShapes)
+         else if (choiceIs3DShapes)
          {
              input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Cylinder \n2. Cube \n3. Cuboid \n4. Triangular Prism");
              choice = Integer.parseInt(input);
