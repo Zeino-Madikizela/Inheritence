@@ -35,7 +35,7 @@ public class Cuboid extends Rectangle
         this.height = side;
     }
 
-    public void setSides(double length, double breadth, double height) {
+    public void setSidesAndHeight(double length, double breadth, double height) {
         super.setSides(length, breadth);
         this.height = height;
     }
