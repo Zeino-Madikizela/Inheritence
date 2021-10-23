@@ -4,7 +4,6 @@ public class Main
 {
      public static void main(String[] args)
      {
-
          String input;
          int choice;
          input = JOptionPane.showInputDialog("Please choose what you will be doing in this app \n1. Calculations of shapes");
@@ -183,7 +182,28 @@ public class Main
 
     public static void calCuboid()
     {
+        Cuboid myCuboid = new Cuboid();
+        double length, breadth, height;
+        boolean calTotalSurfaceArea, calVolume = false;
 
+        input = JOptionPane.showInputDialog("Enter length : ");
+        length = Double.parseDouble(input);
+        input = JOptionPane.showInputDialog("Enter breadth : ");
+        breadth = Double.parseDouble(input);
+        input = JOptionPane.showInputDialog("Enter the height : ");
+        height = Double.parseDouble(input);
+
+        myCuboid.setSidesAndHeight(length, breadth, height);
+        input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Total Surface Area \n2. Calculate Volume");
+        choice = Integer.parseInt(input);
+
+        calTotalSurfaceArea = choice==1;
+        calVolume = choice==2;
+
+        if (calTotalSurfaceArea)
+            JOptionPane.showMessageDialog(null, "The area is " + roundOff(myCuboid.calArea(), 2));
+        else if (calVolume)
+            JOptionPane.showMessageDialog(null, "The volume is : " + roundOff(myCuboid.calVolume(), 2));
     }
      public static void calShapes()
      {
@@ -196,27 +216,27 @@ public class Main
 
          if (is2DShapes)   //2D Shapes
          {
-             boolean choiceIsCircle = choice == 1;
-             boolean choiceIsSqare = choice == 2;
-             boolean choiceIsRectangle = choice == 3;
-             boolean choiceIsTriangle = choice == 4;
+             boolean choiceIsCircle, choiceIsSqare,choiceIsRectangle,choiceIsTriangle = false;
 
              input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Circle \n2. Rectangle \n3. Square \n4. Triangle");
              choice = Integer.parseInt(input);
 
-             if (choice == 1)   //If Circle is chosen
+             choiceIsCircle = choice == 1;
+             choiceIsSqare = choice == 2;
+             choiceIsRectangle = choice == 3;
+             choiceIsTriangle = choice == 4;
+
+             if (choiceIsCircle)
                 calCircle();
 
-             else if (choice == 2) //If Square is chosen
+             else if (choiceIsSqare)
                  calSquare();
 
-             else if (choice == 3)
+             else if (choiceIsRectangle)
                  calRectangle();
 
-             else if (choice == 4) //If Triangle is chosen
-             {
+             else if (choiceIsTriangle)
                  calTriangle();
-             }
 
          }
 
@@ -225,11 +245,20 @@ public class Main
              input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Cylinder \n2. Cube \n3. Cuboid \n4. Triangular Prism");
              choice = Integer.parseInt(input);
 
-             if (choice == 1)
+             boolean choiceIsCylinder, choiceIsCube, choiceIsCuboid, choiceIsTriangularPrism;
+             choiceIsCylinder = choice==1;
+             choiceIsCube = choice==2;
+             choiceIsCuboid = choice==3;
+             choiceIsTriangularPrism = choice==4;
+
+             if (choiceIsCylinder)
                  calCylinder();
 
-             else if (choice == 2)
+             else if (choiceIsCube)
                  calCube();
+
+             else if (choiceIsCuboid)
+                 calCuboid();
          }
 
      }

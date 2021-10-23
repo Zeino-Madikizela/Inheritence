@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Inheritence">
+    <output-path>$PROJECT_DIR$/out/artifacts/Inheritence</output-path>
+    <root id="root">
+      <element id="archive" name="Inheritence.jar">
+        <element id="module-output" name="Inheritence" />
+      </element>
+    </root>
+  </artifact>
+</component>
