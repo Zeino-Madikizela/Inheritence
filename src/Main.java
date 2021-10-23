@@ -181,14 +181,26 @@ public class Main
             JOptionPane.showMessageDialog(null, "The volume of the cube is : " + roundOff(myCube.calVolume(), 2) );
     }
 
+    public static void calCuboid()
+    {
+
+    }
      public static void calShapes()
      {
 
          input = JOptionPane.showInputDialog("1. Enter 1 for 2D shapes  \n2. Enter 2 for 3D shapes : ");
          choice = Integer.parseInt(input);
 
-         if (choice == 1)   //2D Shapes
+         boolean is2DShapes = choice ==1;
+         boolean is3DShapes = choice == 2;
+
+         if (is2DShapes)   //2D Shapes
          {
+             boolean choiceIsCircle = choice == 1;
+             boolean choiceIsSqare = choice == 2;
+             boolean choiceIsRectangle = choice == 3;
+             boolean choiceIsTriangle = choice == 4;
+
              input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Circle \n2. Rectangle \n3. Square \n4. Triangle");
              choice = Integer.parseInt(input);
 
@@ -196,9 +208,7 @@ public class Main
                 calCircle();
 
              else if (choice == 2) //If Square is chosen
-             {
                  calSquare();
-             }
 
              else if (choice == 3)
                  calRectangle();
@@ -210,7 +220,7 @@ public class Main
 
          }
 
-         else if (choice == 2)
+         else if (is3DShapes)
          {
              input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Cylinder \n2. Cube \n3. Cuboid \n4. Triangular Prism");
              choice = Integer.parseInt(input);
