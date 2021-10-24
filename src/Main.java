@@ -205,6 +205,37 @@ public class Main
         else if (calVolume)
             JOptionPane.showMessageDialog(null, "The volume is : " + roundOff(myCuboid.calVolume(), 2));
     }
+
+    public static void calTriangularPrism()
+    {
+        double side1, side2, side3, height;
+        boolean calTotalSurfaceArea, calVolume = false;
+
+        TrianglularPrism myTPrism = new TrianglularPrism();
+
+        input = JOptionPane.showInputDialog("Enter side1 : \t");
+        side1 = Double.parseDouble(input);
+        input = JOptionPane.showInputDialog("Enter side2 : \t");
+        side2 = Double.parseDouble(input);
+        input = JOptionPane.showInputDialog("Enter side3 : \t");
+        side3 = Double.parseDouble(input);
+        input = JOptionPane.showInputDialog("Enter the height : \t");
+        height = Double.parseDouble(input);
+
+        myTPrism.setSidesAndHeight(side1, side2, side3, height);
+
+        input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Total Surface Area \n2. Calculate Volume");
+        choice = Integer.parseInt(input);
+
+        calTotalSurfaceArea = choice==1;
+        calVolume = choice==2;
+
+        if (calTotalSurfaceArea)
+            JOptionPane.showMessageDialog(null, "The area is " + roundOff(myTPrism.calcArea(), 2));
+        else if (calVolume)
+            JOptionPane.showMessageDialog(null, "The volume is : " + roundOff(myTPrism.calcVolume(), 2));
+    }
+
      public static void calShapes()
      {
 
@@ -259,6 +290,9 @@ public class Main
 
              else if (choiceIsCuboid)
                  calCuboid();
+
+             else if (choiceIsTriangularPrism)
+                 calTriangularPrism();
          }
 
      }
