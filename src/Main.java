@@ -53,6 +53,7 @@ public class Main
      public static void calRectangle()
      {
          double height, breadth;
+         boolean calcArea, calcPerimeter = false;
          Rectangle myRectangle = new Rectangle();
          input = JOptionPane.showInputDialog("Enter the height : ");
          height = Double.parseDouble(input);
@@ -63,12 +64,15 @@ public class Main
          input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Area \n2. Calculate Perimeter");
          choice = Integer.parseInt(input);
 
-         if (choice == 1)
+         calcArea = (choice == 1);
+         calcPerimeter = (choice == 2);
+
+         if (calcArea)
          {
              JOptionPane.showMessageDialog(null, "The area of the rectangle is " + roundOff(myRectangle.calcArea(),2 ) );
          }
 
-         else if(choice == 2)
+         else if(calcPerimeter)
          {
              JOptionPane.showMessageDialog(null, "The Perimeter of the rectangle is " + roundOff(myRectangle.calPerimeter(),2 ) );
          }
@@ -80,6 +84,7 @@ public class Main
      public static void calSquare()
      {
          double side;
+         boolean calcArea, calcPerimeter = false;
          Square mySquare = new Square();
          input = JOptionPane.showInputDialog("Enter the side : ");
          side = Double.parseDouble(input);
@@ -88,12 +93,15 @@ public class Main
          input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Area \n2. Calculate Perimeter");
          choice = Integer.parseInt(input);
 
-         if (choice == 1)
+         calcArea = (choice == 1);
+         calcPerimeter = (choice == 2);
+
+         if (calcArea)
          {
              JOptionPane.showMessageDialog(null, "The area of the square is " + roundOff(mySquare.calcArea(),2 ) );
          }
 
-         else if(choice ==2)
+         else if(calcPerimeter)
          {
              JOptionPane.showMessageDialog(null, "The Perimeter of the square is " + roundOff(mySquare.calcPerimeter(),2 ) );
          }
@@ -105,6 +113,7 @@ public class Main
     public static void calTriangle()
     {
         double side1, side2, side3;
+        boolean calcArea, calcPerimeter = false;
 
        Triangle myTriangle = new Triangle();
 
@@ -121,14 +130,17 @@ public class Main
         input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Area \n2. Calculate Perimeter");
         choice = Integer.parseInt(input);
 
+        calcArea = (choice == 1);
+        calcPerimeter = (choice == 2);
+
         //If the user want to calculate the area
-        if (choice == 1)
+        if (calcArea)
         {
             JOptionPane.showMessageDialog(null, "The area of the triangle is " + roundOff(myTriangle.calcArea(),2 ) );
         }
 
         //If the user want to calculate the perimeter
-        else if(choice ==2)
+        else if(calcPerimeter)
         {
             JOptionPane.showMessageDialog(null, "The Perimeter of the square is " + roundOff(myTriangle.calcPerimeter(),2 ) );
         }
