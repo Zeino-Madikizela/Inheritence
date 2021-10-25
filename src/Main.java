@@ -142,9 +142,9 @@ public class Main
         Cylinder myCylinder = new Cylinder();
 
         input = JOptionPane.showInputDialog("Enter the radius : "); //Take input from user
-        radius = Integer.parseInt(input);
+        radius = Double.parseDouble(input);
         input = JOptionPane.showInputDialog("Enter the height : ");
-        height = Integer.parseInt(input);
+        height = Double.parseDouble(input);
 
         myCylinder.setRadius(radius);   //Set the dimensions
         myCylinder.setHeight(height);
@@ -168,7 +168,7 @@ public class Main
         Cube myCube = new Cube();
 
         input = JOptionPane.showInputDialog("Enter the side : "); //Take input from user
-        side = Integer.parseInt(input);
+        side = Double.parseDouble(input);
 
         myCube.setSides(side);
         input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Total Surface Area \n2. Calculate Volume");
