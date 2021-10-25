@@ -277,13 +277,14 @@ public class Main
          {
              boolean choiceIsCircle, choiceIsSqare,choiceIsRectangle,choiceIsTriangle = false;
 
-             input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Circle \n2. Rectangle \n3. Square \n4. Triangle");
+             input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Circle\n2. Square \n3. Triangle\n4. Rectangle ");
              choice = Integer.parseInt(input);
 
              choiceIsCircle = choice == 1;
              choiceIsSqare = choice == 2;
-             choiceIsRectangle = choice == 3;
-             choiceIsTriangle = choice == 4;
+             choiceIsTriangle = choice == 3;
+             choiceIsRectangle = choice == 4;
+
 
              if (choiceIsCircle)
                 calCircle();
@@ -291,17 +292,16 @@ public class Main
              else if (choiceIsSqare)
                  calSquare();
 
-             else if (choiceIsRectangle)
-                 calRectangle();
-
              else if (choiceIsTriangle)
                  calTriangle();
 
+             else if (choiceIsRectangle)
+                 calRectangle();
          }
 
          else if (choiceIs3DShapes)
          {
-             input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Cylinder \n2. Cube \n3. Cuboid \n4. Triangular Prism");
+             input = JOptionPane.showInputDialog("Please choose the shape to perform calculations on\n1. Cylinder \n2. Cube\n3. Triangular Prism \n4. Cuboid ");
              choice = Integer.parseInt(input);
 
              boolean choiceIsCylinder, choiceIsCube, choiceIsCuboid, choiceIsTriangularPrism;
