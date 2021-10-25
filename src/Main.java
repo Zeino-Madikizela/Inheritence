@@ -33,7 +33,7 @@ public class Main
 
          Circle myCircle = new Circle();
          input = JOptionPane.showInputDialog("Enter the radius");
-         choice = Integer.parseInt(input);
+         radius = Double.parseDouble(input);
          myCircle.setRadius(choice);
 
          input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Area \n2. Calculate Perimeter");
@@ -55,9 +55,9 @@ public class Main
          double height, breadth;
          Rectangle myRectangle = new Rectangle();
          input = JOptionPane.showInputDialog("Enter the height : ");
-         height = Integer.parseInt(input);
+         height = Double.parseDouble(input);
          input = JOptionPane.showInputDialog("Enter the breadth : ");
-         breadth = Integer.parseInt(input);
+         breadth = Double.parseDouble(input);
          myRectangle.setSides(height,breadth);
 
          input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Area \n2. Calculate Perimeter");
@@ -68,7 +68,7 @@ public class Main
              JOptionPane.showMessageDialog(null, "The area of the rectangle is " + roundOff(myRectangle.calcArea(),2 ) );
          }
 
-         else if(choice ==2)
+         else if(choice == 2)
          {
              JOptionPane.showMessageDialog(null, "The Perimeter of the rectangle is " + roundOff(myRectangle.calPerimeter(),2 ) );
          }
@@ -82,7 +82,7 @@ public class Main
          double side;
          Square mySquare = new Square();
          input = JOptionPane.showInputDialog("Enter the side : ");
-         side = Integer.parseInt(input);
+         side = Double.parseDouble(input);
          mySquare.setSide(side);
 
          input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Area \n2. Calculate Perimeter");
