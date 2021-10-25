@@ -19,8 +19,18 @@ public class Main
     static String input;
     static int choice;
 
+    /**2D Shapes **********************************************
+     * 1. Circle
+     * 2. Rectangle
+     * 3. Square
+     * 4. Triangle
+     */
+
      public static void calCircle()
      {
+         double radius;
+         boolean calcArea, calcPerimeter = false;
+
          Circle myCircle = new Circle();
          input = JOptionPane.showInputDialog("Enter the radius");
          choice = Integer.parseInt(input);
@@ -29,15 +39,14 @@ public class Main
          input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Area \n2. Calculate Perimeter");
          choice = Integer.parseInt(input);
 
-         if (choice == 1)
-         {
-             JOptionPane.showMessageDialog(null, "The area of the circle with radius " + myCircle.getRadius() + " is " + roundOff(myCircle.calcArea(),2) );
-         }
+         calcArea = (choice == 1);
+         calcPerimeter = (choice == 2);
 
-         else if(choice ==2)
-         {
+         if (calcArea)
+             JOptionPane.showMessageDialog(null, "The area of the circle with radius " + myCircle.getRadius() + " is " + roundOff(myCircle.calcArea(),2) );
+
+         else if(calcPerimeter)
              JOptionPane.showMessageDialog(null, "The Perimeter of the circle with radius " + myCircle.getRadius() + " is " + roundOff(myCircle.calcPerimeter(),2) );
-         }
 
      }
 
