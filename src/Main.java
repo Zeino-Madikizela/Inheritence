@@ -161,6 +161,7 @@ public class Main
     {
         double radius, height;
         Cylinder myCylinder = new Cylinder();
+        boolean calcSurfaceArea, calcVolume = false;
 
         input = JOptionPane.showInputDialog("Enter the radius : "); //Take input from user
         radius = Double.parseDouble(input);
@@ -173,19 +174,22 @@ public class Main
         input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Total Surface Area \n2. Calculate Volume");
         choice = Integer.parseInt(input);
 
-        if (choice == 1)
+        calcSurfaceArea = choice==1;
+        calcVolume = choice==2;
+
+        if (calcSurfaceArea)
                     JOptionPane.showMessageDialog(null,"The Total Surface area is : " + roundOff(myCylinder.calcArea() , 2) );
 
 
-        else if (choice == 2)
+        else if (calcVolume)
             JOptionPane.showMessageDialog(null, "The volume is : " + roundOff(myCylinder.calVolume(), 2) );
-
 
     }
 
     public static void calCube()
     {
         double side;
+        boolean calcSurfaceArea, calcVolume = false;
         Cube myCube = new Cube();
 
         input = JOptionPane.showInputDialog("Enter the side : "); //Take input from user
@@ -195,9 +199,12 @@ public class Main
         input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Total Surface Area \n2. Calculate Volume");
         choice = Integer.parseInt(input);
 
-        if (choice == 1)
+        calcSurfaceArea = choice==1;
+        calcVolume = choice==2;
+
+        if (calcSurfaceArea)
             JOptionPane.showMessageDialog(null, "The Total Surface area is : " + roundOff(myCube.calcArea(),2) );
-        else if (choice == 2)
+        else if (calcVolume)
             JOptionPane.showMessageDialog(null, "The volume of the cube is : " + roundOff(myCube.calVolume(), 2) );
     }
 
