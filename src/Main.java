@@ -327,9 +327,14 @@ public class Main
 
      public static double roundOff(double value, int deciPlace)
      {
+         int lastValue = (int)(value*(Math.pow(10, deciPlace + 1)) )%10;
          value = value*(Math.pow(10,deciPlace));
          int temp = (int) value;
          value = temp/Math.pow(10,deciPlace);
+         if (lastValue >= 5)
+         {
+             value += Math.pow(10,-deciPlace);
+         }
          return value;
      }
 
