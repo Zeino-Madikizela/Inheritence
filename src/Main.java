@@ -34,7 +34,7 @@ public class Main
          Circle myCircle = new Circle();
          input = JOptionPane.showInputDialog("Enter the radius");
          radius = Double.parseDouble(input);
-         myCircle.setRadius(choice);
+         myCircle.setRadius(radius);
 
          input = JOptionPane.showInputDialog("Select what you would like to do\n1. Calculate Area \n2. Calculate Perimeter");
          choice = Integer.parseInt(input);
