@@ -13,6 +13,11 @@ public class Main
              calShapes();
          }
 
+         else
+         {
+             JOptionPane.showMessageDialog(null, "You have selected an invalid option");
+         }
+
      }
 
      //Class variables
