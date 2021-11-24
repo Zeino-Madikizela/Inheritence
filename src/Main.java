@@ -328,6 +328,12 @@ public class Main
                  calTriangularPrism();
          }
 
+         else
+         {
+             JOptionPane.showMessageDialog(null, "You have selected a wrong option please try again");
+             calShapes();
+         }
+
      }
 
      public static double roundOff(double value, int deciPlace)
